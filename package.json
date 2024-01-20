@@ -60,6 +60,7 @@
     "react-router-dom": "^6.21.2",
     "ts-node": "^10.9.2"
   },
+  "license": "MIT",
   "engines": {
     "node": ">=16.0.0 <=20.x.x",
     "npm": ">=6.0.0"

@@ -1,30 +1,69 @@
-# Project Title
+# Dorfstetter.at | My personal website
 
-Briefly describe what your project is about.
+This project is used to build my own personal [website](https://dorfstetter.at/).
+Feel free to use any snippets you find interesting, or the whole project to build your own web-project.
 
 ## Project Structure
 
-Provide a high-level overview of how files and directories are laid out in your repository. E.g:
+### /
 
-. ├── src │ ├── index.ts │ ├── App.js │ └── components │ └── Component1.js │ └── Component2.js ├── styles │ ├──
-index.scss │ └── Component1.scss │ └── Component2.scss ├── node_modules ├── package.json └── README.md
+The root of the project contains next-config, jest-config and other files needed to configure the project and it's tools.
+
+### /src
+
+Contains the logic of the project & our middleware.
+
+#### /app
+
+##### /
+
+Contains global files & globally used utility functions.
+
+##### /i18n
+
+Files needed to resolve language based operations and initializing our translation.
+
+#### /[lng]
+
+The real logic behind every single page, global components and styles.
+
+### /public
+
+Assets used by the application, also includes language files for translation.
+
+### /favicon
+
+Favicon, Icons and web manifest.
+
+### /fonts
+
+Fonts are included directly in the project.
+
+### /icons
+
+Icons used for the application.
+
+### /img
+
+Logos, images that shouldn't be loaded from the cdn.
+
+### /locales
+
+The language files for the entire application.
 
 ## Prerequisites / Technologies Used
 
-- List of any software requirements or dependencies for this project. For example:
-
-  - Node.js
-  - React
-  - Sass
+- [Next.js](https://nextjs.org/) as a frontend-technology
+- [Strapi](https://strapi.io/) as a backend server/headless cms system
+- [Jest](https://jestjs.io/) as a frontend test-runner
+- [SCSS](https://sass-lang.com/documentation/) for stylesheets
 
 ## Installation
-
-Provide step by step instructions on how to install all dependencies and get the project running. For example:
 
 1. Clone the repo
 
    ```bash
-   git clone https://github.com/yourusername/yourreponame.git
+   git clone https://github.com/dominikdorfstetter/dorfstetter-next-public.git
    ```
 
 2. Install NPM packages
@@ -34,13 +73,35 @@ Provide step by step instructions on how to install all dependencies and get the
 
 ## Usage / Getting Started
 
-Describe how to use your project. If it's a web app, include the command to start the web server (e.g. `npm start`) and
-tell the user to open a browser to the right port number.
+### Start the project in development mode.
+
+```bash
+npm run dev
+```
+
+### Build the project
+
+```bash
+npm run build
+```
 
 ## Testing
 
-If you have a testing framework set up, describe how to run the tests.
+Every new component or any existing component that gets refactored needs to have at least a test,
+that creates the component and checks if it is created.
+
+### How to run the tests
+
+```bash
+npm run test
+```
+
+### How to run the tests in watch mode
+
+```bash
+npm run test:watch
+```
 
 ## License
 
-Let people know how they can use your project with a [license](https://choosealicense.com/).
+MIT
