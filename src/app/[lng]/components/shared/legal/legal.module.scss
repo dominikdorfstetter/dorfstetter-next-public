@@ -2,11 +2,12 @@
 @use "../../../styles/mixins" as mixins;
 
 .legal__link {
-    &:hover, &:focus {
-        cursor: pointer;
-        text-decoration: underline;
-        outline: none;
-    }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: underline;
+    outline: none;
+  }
 }
 
 .banner__backdrop {
@@ -35,15 +36,13 @@
   border: variables.$border-regular;
   overflow-y: auto;
 
-
-
   .banner__header {
     background: lighten(variables.$color-primary, 5%);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: .3em 1em;
+    padding: 0.3em 1em;
 
     .banner__title {
       font-size: 1.5em;
@@ -61,19 +60,19 @@
         height: 2em;
         font-size: 1.1em;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           background-color: variables.$color-highlight;
         }
       }
     }
   }
 
-
   .banner__checkbox {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: .5em;
+    gap: 0.5em;
     font-size: 1em;
     font-weight: 300;
   }
@@ -105,7 +104,7 @@
     line-height: 2em;
 
     button {
-      padding: .4em;
+      padding: 0.4em;
       text-transform: uppercase;
       font-weight: 500;
       min-width: 33.33%;
@@ -120,7 +119,8 @@
         text-align: right;
       }
 
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         cursor: pointer;
         font-weight: 900;
       }
@@ -148,7 +148,8 @@
     border-radius: variables.$border-radius-regular;
     overflow: hidden;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border: variables.$border-small-hover;
     }
 
@@ -171,7 +172,8 @@
         color: variables.$color-highlight-secondary;
         width: 20px;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: variables.$color-highlight;
           outline: none;
         }
@@ -180,14 +182,11 @@
 
     .accordion__title,
     .accordion__content {
-      padding: .2em .7em;
+      padding: 0.2em 0.7em;
     }
 
     .accordion__content {
       background-color: lighten(variables.$color-primary, 20%);
     }
-
   }
 }
-
-

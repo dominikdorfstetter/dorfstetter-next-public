@@ -1,0 +1,16 @@
+node_modules
+**/.next/**
+**/_next/**
+**/dist/**
+**/__tmp__/**
+**/jest.config.ts
+**/jest.setup.ts
+**/next.config.js
+**/.env*.*
+**/next-env.d.ts
+**/tsconfig.json
+**/*.json
+package-lock.json
+yarn.lock
+package.json
+coverage

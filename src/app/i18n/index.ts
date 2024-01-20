@@ -1,7 +1,7 @@
-import {createInstance, i18n} from 'i18next';
-import resourcesToBackend from 'i18next-resources-to-backend';
-import {initReactI18next} from 'react-i18next/initReactI18next';
-import {getOptions} from './settings';
+import { createInstance, i18n } from "i18next";
+import resourcesToBackend from "i18next-resources-to-backend";
+import { initReactI18next } from "react-i18next/initReactI18next";
+import { getOptions } from "./settings";
 
 /**
  * Initializes i18next instance
@@ -11,14 +11,18 @@ import {getOptions} from './settings';
  * @returns {Promise<i18n>} - A promise that resolves to the i18next instance
  */
 const initI18next = async (lng: string, ns: string): Promise<i18n> => {
-    const i18nInstance = createInstance();
-    await i18nInstance
-        .use(initReactI18next)
-        .use(resourcesToBackend((language: string, namespace: string) =>
-            import(`../../../public/locales/${language}/${namespace}.json`)))
-        .init(getOptions({lng, ns}));
+  const i18nInstance = createInstance();
+  await i18nInstance
+    .use(initReactI18next)
+    .use(
+      resourcesToBackend(
+        (language: string, namespace: string) =>
+          import(`../../../public/locales/${language}/${namespace}.json`),
+      ),
+    )
+    .init(getOptions({ lng, ns }));
 
-    return i18nInstance;
+  return i18nInstance;
 };
 
 /**
@@ -29,7 +33,7 @@ const initI18next = async (lng: string, ns: string): Promise<i18n> => {
  * @returns {Promise<i18n>} - A Promise that resolves to the i18next instance.
  */
 const _getI18nextInstance = async (lng: string, ns: string): Promise<i18n> => {
-    return await initI18next(lng, ns);
+  return await initI18next(lng, ns);
 };
 
 /**
@@ -39,7 +43,7 @@ const _getI18nextInstance = async (lng: string, ns: string): Promise<i18n> => {
  * @property {string} [keyPrefix] - The optional key prefix for the option type.
  */
 interface OptionType {
-    keyPrefix?: string;
+  keyPrefix?: string;
 }
 
 /**
@@ -50,13 +54,16 @@ interface OptionType {
  * @param {OptionType} options - The options for translation.
  * @returns {Promise<{ t: Function, i18n: i18n }>} - An object containing the translation function and the i18n instance.
  */
-export async function useTranslation(lng: string, ns: string, options: OptionType = {}):
-    Promise<{ t: Function; i18n: i18n; }> {
-    const i18nextInstance = await _getI18nextInstance(lng, ns);
-    const namespace = Array.isArray(ns) ? ns[0] : ns; // Extracted variable
+export async function useTranslation(
+  lng: string,
+  ns: string,
+  options: OptionType = {},
+): Promise<{ t: Function; i18n: i18n }> {
+  const i18nextInstance = await _getI18nextInstance(lng, ns);
+  const namespace = Array.isArray(ns) ? ns[0] : ns; // Extracted variable
 
-    return {
-        t: i18nextInstance.getFixedT(lng, namespace, options.keyPrefix),
-        i18n: i18nextInstance,
-    };
+  return {
+    t: i18nextInstance.getFixedT(lng, namespace, options.keyPrefix),
+    i18n: i18nextInstance,
+  };
 }

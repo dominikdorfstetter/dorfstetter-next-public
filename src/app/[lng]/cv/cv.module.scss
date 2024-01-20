@@ -2,78 +2,81 @@
 @use "../styles/mixins" as mixins;
 
 .inline_flex {
-    display: inline-flex;
-    gap: .5em;
-    align-items: center;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: center;
 }
 
 .cv_list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2em .5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2em 0.5em;
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    padding-left: 3em;
-    padding-bottom: 2em;
-    padding-top: .5em;
-    border-left-width: 5px;
-    border-left-color: variables.$color-highlight-secondary;
-    border-left-style: solid;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding-left: 3em;
+  padding-bottom: 2em;
+  padding-top: 0.5em;
+  border-left-width: 5px;
+  border-left-color: variables.$color-highlight-secondary;
+  border-left-style: solid;
 }
 
 .cv_skills_wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1em;
-    padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-top: 1em;
 }
 
 .cv_list_item {
-    color: variables.$color-secondary;
-    padding: .2em .5em;
-    font-size: .85em;
-    font-weight: 700;
-    background-color: variables.$color-highlight-secondary;
-    border-radius: 10px;
+  color: variables.$color-secondary;
+  padding: 0.2em 0.5em;
+  font-size: 0.85em;
+  font-weight: 700;
+  background-color: variables.$color-highlight-secondary;
+  border-radius: 10px;
 }
 
 .cv_position {
-    background-color: variables.$color-highlight;
-    background-image: linear-gradient(45deg,
-    variables.$color-highlight, variables.$color-highlight-secondary);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
+  background-color: variables.$color-highlight;
+  background-image: linear-gradient(
+    45deg,
+    variables.$color-highlight,
+    variables.$color-highlight-secondary
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 .cv_position::before {
-    content: "";
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    background: variables.$color-primary;
-    border-radius: 50%;
-    left: -.7em;
-    top: .75em;
-    border: 3px solid variables.$color-highlight-secondary;
-    margin-top: .5em;
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: variables.$color-primary;
+  border-radius: 50%;
+  left: -0.7em;
+  top: 0.75em;
+  border: 3px solid variables.$color-highlight-secondary;
+  margin-top: 0.5em;
 }
 
 .cv_company {
-    font-family: variables.$font-highlight;
+  font-family: variables.$font-highlight;
 }

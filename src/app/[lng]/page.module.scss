@@ -19,7 +19,9 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
   max-width: 350px;
 }
 
@@ -67,7 +69,7 @@
   flex-direction: column;
   gap: 7em;
 
-  @include mixins.respond-to('large') {
+  @include mixins.respond-to("large") {
     gap: 5vh;
   }
 }
@@ -79,7 +81,7 @@
   justify-content: center;
   gap: 3em;
 
-  @include mixins.respond-to('large') {
+  @include mixins.respond-to("large") {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
@@ -90,23 +92,23 @@
     flex-direction: column;
     max-width: 100%;
 
-    @include mixins.respond-to('large') {
-        align-items: center;
-        justify-content: center;
+    @include mixins.respond-to("large") {
+      align-items: center;
+      justify-content: center;
     }
 
     .hero_text {
       text-align: left;
       font-size: clamp(1.125rem, 0.8125rem + 1.25vw, 1.75rem);
 
-      @include mixins.respond-to('large') {
+      @include mixins.respond-to("large") {
         text-align: center;
       }
     }
 
     .hero_headline {
       text-align: left;
-      @include mixins.respond-to('large') {
+      @include mixins.respond-to("large") {
         text-align: center;
       }
     }
@@ -115,7 +117,7 @@
   .hero_picture {
     justify-self: end;
 
-    @include mixins.respond-to('large') {
+    @include mixins.respond-to("large") {
       display: flex;
       justify-content: center;
     }
@@ -130,25 +132,23 @@
       border-radius: 50%;
       border: variables.$border-regular;
 
-      @include mixins.respond-to('large') {
+      @include mixins.respond-to("large") {
         max-height: 500px;
         height: auto;
       }
 
-      @include mixins.respond-to('medium') {
+      @include mixins.respond-to("medium") {
         max-height: 400px;
         width: auto;
       }
 
-      @include mixins.respond-to('small') {
+      @include mixins.respond-to("small") {
         max-height: 300px;
         width: auto;
       }
     }
   }
 }
-
-
 
 .gradient_heading {
   font-family: variables.$font-highlight;
@@ -159,10 +159,13 @@
 
 .gradient_font {
   font-weight: bolder;
-  letter-spacing: -.005px;
+  letter-spacing: -0.005px;
   background-color: variables.$color-highlight;
-  background-image: linear-gradient(45deg,
-          variables.$color-highlight, variables.$color-highlight-secondary);
+  background-image: linear-gradient(
+    45deg,
+    variables.$color-highlight,
+    variables.$color-highlight-secondary
+  );
   line-height: 1em;
   background-size: 100%;
   -webkit-background-clip: text;
@@ -177,9 +180,9 @@
   align-items: center;
   overflow-x: scroll;
 
-  @include mixins.respond-to('large'){
-    padding-left: .25em;
-    padding-right: .25em;
+  @include mixins.respond-to("large") {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
     padding-bottom: 1em;
   }
 
@@ -196,7 +199,8 @@
   border-radius: 92px;
 }
 
-.page_card_wrapper::-webkit-scrollbar-thumb, .cards::-webkit-scrollbar-track {
+.page_card_wrapper::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
   background: variables.$color-highlight-secondary;
 }
 
@@ -239,7 +243,7 @@
 
 .card_text {
   font-family: variables.$font-regular;
-  font-size: .9em;
+  font-size: 0.9em;
   line-height: 1.5em;
 }
 
@@ -247,10 +251,15 @@
   border: variables.$border-regular-hover;
 }
 
-.page_card:hover::after, .page_card:focus::after {
-  background-image: linear-gradient(to right, variables.$color-highlight-secondary 10%, variables.$color-highlight 90%);
+.page_card:hover::after,
+.page_card:focus::after {
+  background-image: linear-gradient(
+    to right,
+    variables.$color-highlight-secondary 10%,
+    variables.$color-highlight 90%
+  );
   mix-blend-mode: color-burn;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @media (max-width: 600px) {
@@ -263,15 +272,15 @@
 .page_wrapper {
   padding-top: variables.$landing-padding-top;
 
-  @include mixins.respond-to('large') {
+  @include mixins.respond-to("large") {
     padding-top: variables.$landing-padding-top-large;
   }
 
-  @include mixins.respond-to('medium') {
+  @include mixins.respond-to("medium") {
     padding-top: variables.$landing-padding-top-medium;
   }
 
-  @include mixins.respond-to('small') {
+  @include mixins.respond-to("small") {
     padding-top: variables.$landing-padding-top-small;
   }
 }

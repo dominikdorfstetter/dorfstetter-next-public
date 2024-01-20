@@ -1,308 +1,321 @@
-@use 'variables' as variables;
-@use 'mixins' as mixins;
+@use "variables" as variables;
+@use "mixins" as mixins;
 
 b {
-    font-weight: 900;
-    color: variables.$color-highlight-secondary;
+  font-weight: 900;
+  color: variables.$color-highlight-secondary;
 }
 
 a {
-    all: unset;
-    cursor: pointer;
+  all: unset;
+  cursor: pointer;
 }
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: variables.$font-regular;
-    line-height: 1.6;
-    font-size: variables.$font-size-regular;
-    background-color: variables.$color-primary;
-    color: variables.$color-secondary;
+  padding: 0;
+  margin: 0;
+  font-family: variables.$font-regular;
+  line-height: 1.6;
+  font-size: variables.$font-size-regular;
+  background-color: variables.$color-primary;
+  color: variables.$color-secondary;
 }
 
 body {
-    -moz-osx-font-smoothing: auto;
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 .primary_button {
-    font-size: .85rem;
-    font-family: variables.$font-highlight;
-    color: variables.$color-highlight-secondary;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    line-height: 2.5em;
-    height: 2.5em;
-    padding: 0 0.5em;
-    border: variables.$border-regular;
-    border-radius: variables.$border-radius-regular;
+  font-size: 0.85rem;
+  font-family: variables.$font-highlight;
+  color: variables.$color-highlight-secondary;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  line-height: 2.5em;
+  height: 2.5em;
+  padding: 0 0.5em;
+  border: variables.$border-regular;
+  border-radius: variables.$border-radius-regular;
 }
 
-.primary_button:hover, .primary_button:focus {
-    cursor: pointer;
-    color: variables.$color-highlight;
-    border: variables.$border-regular-hover;
+.primary_button:hover,
+.primary_button:focus {
+  cursor: pointer;
+  color: variables.$color-highlight;
+  border: variables.$border-regular-hover;
 }
 
 .share_button {
-    color: variables.$color-highlight-secondary;
+  color: variables.$color-highlight-secondary;
 
-    .icon_svg {
-        width: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
-        height: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
-        margin-top: -5px;
-    }
+  .icon_svg {
+    width: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
+    height: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
+    margin-top: -5px;
+  }
 }
 
-.share_button:hover, .share_button:focus {
-    color: variables.$color-highlight;
-    cursor: pointer;
-    outline: none;
+.share_button:hover,
+.share_button:focus {
+  color: variables.$color-highlight;
+  cursor: pointer;
+  outline: none;
 }
 
 .padding_small {
-    padding-top: 1em;
+  padding-top: 1em;
 }
 
 code {
-    font-family: variables.$font-code;
-    font-size: 1rem;
-    line-height: 2rem;
-    font-weight: bold;
-    color: variables.$color-secondary;
+  font-family: variables.$font-code;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color: variables.$color-secondary;
 }
 
 pre {
-    position: relative;
-    width: 100%;
-    background-color: variables.$color-highlight-secondary;
-    border-radius: 10px;
-    max-width: 100%;
-    overflow-y: auto;
-    cursor: pointer;
+  position: relative;
+  width: 100%;
+  background-color: variables.$color-highlight-secondary;
+  border-radius: 10px;
+  max-width: 100%;
+  overflow-y: auto;
+  cursor: pointer;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 10px;
-        color: variables.$color-highlight;
-        font-family: variables.$font-highlight;
-        font-size: 1em;
-        font-weight: bold;
-        text-transform: uppercase;
-        opacity: 1;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    color: variables.$color-highlight;
+    font-family: variables.$font-highlight;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 1;
+  }
 }
 
 blockquote {
-    margin: 0;
+  margin: 0;
 
-    span {
-        font-family: variables.$font-serif;
-        font-size: 1.2em;
-        line-height: 1.5em;
-    }
+  span {
+    font-family: variables.$font-serif;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 
-    border-left: variables.$border-regular;
-    padding: 1em;
+  border-left: variables.$border-regular;
+  padding: 1em;
 }
 
 picture {
-    figcaption {
-        font-family: variables.$font-regular;
-        font-weight: 400;
-        font-size: .75em;
-        line-height: 1em;
-        text-align: center;
-    }
+  figcaption {
+    font-family: variables.$font-regular;
+    font-weight: 400;
+    font-size: 0.75em;
+    line-height: 1em;
+    text-align: center;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: variables.$font-highlight;
-    text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$font-highlight;
+  text-transform: uppercase;
 }
 
 p {
-    font-size: 1.1em;
-    line-height: 1.85em;
-    hyphens: auto;
-    text-align: justify
+  font-size: 1.1em;
+  line-height: 1.85em;
+  hyphens: auto;
+  text-align: justify;
 }
 
 p > a {
-    color: variables.$color-highlight-secondary;
-    letter-spacing: .05em;
+  color: variables.$color-highlight-secondary;
+  letter-spacing: 0.05em;
 }
 
-button, input[type="submit"], input[type="reset"] {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-[aria-hidden="true"]  { display: none; }
-[aria-hidden="false"] { display: block; }
+[aria-hidden="true"] {
+  display: none;
+}
+[aria-hidden="false"] {
+  display: block;
+}
 
 .form-control {
-    font-family: system-ui, sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.1;
-    display: grid;
-    grid-template-columns: 1em auto;
-    gap: 0.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
 }
 
 .form-control + .form-control {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .form-control--disabled {
-    color: var(--form-control-disabled);
-    cursor: not-allowed;
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
 }
 
 input[type="checkbox"] {
-    /* Add if not using autoprefixer */
-    -webkit-appearance: none;
-    /* Remove most all native input styles */
-    appearance: none;
-    /* For iOS < 15 */
-    background-color: lighten(variables.$color-primary, 70%);
-    /* Not removed via appearance */
-    margin: 0;
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: lighten(variables.$color-primary, 70%);
+  /* Not removed via appearance */
+  margin: 0;
 
-    font: inherit;
-    color: variables.$color-highlight;
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.15em solid variables.$color-highlight-secondary;
-    border-radius: 0.15em;
-    transform: translateY(-0.075em);
+  font: inherit;
+  color: variables.$color-highlight;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid variables.$color-highlight-secondary;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
 
-    display: grid;
-    place-content: center;
+  display: grid;
+  place-content: center;
 }
 
 input[type="checkbox"]::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    color: variables.$color-highlight-secondary;
-    transform: scale(0);
-    transform-origin: bottom left;
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em variables.$color-highlight-secondary;
-    /* Windows High Contrast Mode */
-    background-color: variables.$color-highlight-secondary;
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  color: variables.$color-highlight-secondary;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em variables.$color-highlight-secondary;
+  /* Windows High Contrast Mode */
+  background-color: variables.$color-highlight-secondary;
 }
 
 input[type="checkbox"]:checked::before {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 input[type="checkbox"]:focus {
-    outline: max(2px, 0.15em) solid variables.$color-highlight-secondary;
-    outline-offset: max(2px, 0.15em);
+  outline: max(2px, 0.15em) solid variables.$color-highlight-secondary;
+  outline-offset: max(2px, 0.15em);
 }
 
 .page_image {
-    width: 30%;
-    float: right;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    max-width: 1000px;
-    max-height: 400px;
-    height: auto;
-    border-radius: 38%;
-    overflow: hidden;
-    shape-outside: circle(39.90% at 135px 210px);
-    shape-margin: 1em;
-    margin-top: 2em;
+  width: 30%;
+  float: right;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  max-width: 1000px;
+  max-height: 400px;
+  height: auto;
+  border-radius: 38%;
+  overflow: hidden;
+  shape-outside: circle(39.9% at 135px 210px);
+  shape-margin: 1em;
+  margin-top: 2em;
 
-    @include mixins.respond-to('large') {
-        float: none;
-        width: 50%;
-        max-width: 100%;
-        max-height: 600px;
-        shape-margin: unset;
-        margin-top: unset;
-        shape-outside: unset;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  @include mixins.respond-to("large") {
+    float: none;
+    width: 50%;
+    max-width: 100%;
+    max-height: 600px;
+    shape-margin: unset;
+    margin-top: unset;
+    shape-outside: unset;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .blog_image {
-    width: 100%;
-    max-inline-size: 100%;
-    aspect-ratio: auto 1/1;
-    block-size: auto;
-    object-fit: contain;
-    padding-bottom: 1em;
-    max-width: 100%;
-    max-height: 400px;
-    height: auto;
+  width: 100%;
+  max-inline-size: 100%;
+  aspect-ratio: auto 1/1;
+  block-size: auto;
+  object-fit: contain;
+  padding-bottom: 1em;
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
 }
 
 .loading_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
 
-    .loading_spinner {
-        width: 200px;
-        height: 200px;
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: cover;
-        cursor: inherit;
-        background-color: variables.$color-highlight-secondary;
-        mask-image: url('/img/loading_rings.svg');
-        -webkit-mask-image: url('/img/loading_rings.svg');
-    }
+  .loading_spinner {
+    width: 200px;
+    height: 200px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    cursor: inherit;
+    background-color: variables.$color-highlight-secondary;
+    mask-image: url("/img/loading_rings.svg");
+    -webkit-mask-image: url("/img/loading_rings.svg");
+  }
 }
 
 .page_wrapper {
-    padding-top: variables.$page-padding-top;
+  padding-top: variables.$page-padding-top;
 
-    @include mixins.respond-to('large') {
-        padding-top: variables.$page-padding-top-large;
-    }
+  @include mixins.respond-to("large") {
+    padding-top: variables.$page-padding-top-large;
+  }
 
-    @include mixins.respond-to('medium') {
-        padding-top: variables.$page-padding-top-medium;
-    }
+  @include mixins.respond-to("medium") {
+    padding-top: variables.$page-padding-top-medium;
+  }
 
-    @include mixins.respond-to('small') {
-        padding-top: variables.$page-padding-top-small;
-    }
+  @include mixins.respond-to("small") {
+    padding-top: variables.$page-padding-top-small;
+  }
 }
 
 .scroll_disabled {
-    overflow: hidden;
+  overflow: hidden;
 }

@@ -6,9 +6,9 @@ import React from "react";
  * @returns {React.JSX.Element} - The loading component.
  */
 export default function LoadingBlogs(): React.JSX.Element {
-    return (
-        <div className={`loading_wrapper`}>
-            <div className={`loading_spinner`}></div>
-        </div>
-    );
+  return (
+    <div className={`loading_wrapper`}>
+      <div className={`loading_spinner`}></div>
+    </div>
+  );
 }

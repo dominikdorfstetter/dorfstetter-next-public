@@ -1,209 +1,219 @@
-import {AriaRole, IconType} from "@app/[lng]/components/icon";
+import { AriaRole, IconType } from "@app/[lng]/components/icon";
 import { i18n } from "i18next";
 
 export interface BlogPageAPIResponse {
-    data: BlogData;
-    meta: Meta;
+  data: BlogData;
+  meta: Meta;
 }
 
-interface Meta {
-}
+interface Meta {}
 
 interface BlogData {
-    id: number;
-    attributes: Blog;
+  id: number;
+  attributes: Blog;
 }
 
 export interface Blog {
-    title: string;
-    content: Content[];
-    author: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    locale: string;
-    date: string;
-    teaserText: string;
-    coverimage: Coverimage;
-    attachments: Attachments;
-    links: LinkData[];
-    keywords: Keyword[]
-    photos: Photos;
+  title: string;
+  content: Content[];
+  author: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  locale: string;
+  date: string;
+  teaserText: string;
+  coverimage: Coverimage;
+  attachments: Attachments;
+  links: LinkData[];
+  keywords: Keyword[];
+  photos: Photos;
 }
 
 export interface Keyword {
-    id: number;
-    keyword: string;
+  id: number;
+  keyword: string;
 }
 
 export interface LinkData {
-    id: number;
-    url: string;
-    alt: string;
-    title: string;
+  id: number;
+  url: string;
+  alt: string;
+  title: string;
 }
 
 interface Photos {
-    data: any[];
+  data: any[];
 }
 
 export interface Attachments {
-    data: AttachmentData[]
+  data: AttachmentData[];
 }
 
 export interface AttachmentData {
-    id: number
-    attributes: AttachmentsAttributes
+  id: number;
+  attributes: AttachmentsAttributes;
 }
 
 export interface AttachmentsAttributes {
-    name: string
-    alternativeText: any
-    caption: any
-    width: any
-    height: any
-    formats: any
-    hash: string
-    ext: string
-    mime: string
-    size: number
-    url: string
-    previewUrl: any
-    provider: string
-    provider_metadata: ProviderMetadata;
-    createdAt: string
-    updatedAt: string
+  name: string;
+  alternativeText: any;
+  caption: any;
+  width: any;
+  height: any;
+  formats: any;
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl: any;
+  provider: string;
+  provider_metadata: ProviderMetadata;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface Coverimage {
-    data: Data;
+  data: Data;
 }
 
 export interface Data {
-    id: number;
-    attributes: Attributes;
+  id: number;
+  attributes: Attributes;
 }
 
 export interface Attributes {
-    name: string;
-    alternativeText?: any;
-    caption?: any;
-    width: number;
-    height: number;
-    formats: Formats;
-    hash: string;
-    ext: string;
-    mime: string;
-    size: number;
-    url: string;
-    previewUrl?: any;
-    provider: string;
-    provider_metadata: ProviderMetadata;
-    createdAt: string;
-    updatedAt: string;
+  name: string;
+  alternativeText?: any;
+  caption?: any;
+  width: number;
+  height: number;
+  formats: Formats;
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl?: any;
+  provider: string;
+  provider_metadata: ProviderMetadata;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface Content {
-    type: ContentType;
-    children: ContentElement[];
-    level?: HeadlineLevel;
-    format?: ListFormat;
-    image?: ImageData;
+  type: ContentType;
+  children: ContentElement[];
+  level?: HeadlineLevel;
+  format?: ListFormat;
+  image?: ImageData;
 }
 
 export type HeadlineLevel = 1 | 2 | 3 | 4 | 5 | 6;
-export type ListFormat = 'unordered' | 'ordered';
+export type ListFormat = "unordered" | "ordered";
 
 export interface ImageData {
-    name: string;
-    alternativeText: string;
-    caption?: any;
-    width: number;
-    height: number;
-    formats: Formats;
-    hash: string;
-    ext: string;
-    mime: string;
-    size: number;
-    url: string;
-    previewUrl?: any;
-    provider: string;
-    provider_metadata: ProviderMetadata;
-    createdAt: string;
-    updatedAt: string;
+  name: string;
+  alternativeText: string;
+  caption?: any;
+  width: number;
+  height: number;
+  formats: Formats;
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl?: any;
+  provider: string;
+  provider_metadata: ProviderMetadata;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface Formats {
-    thumbnail: ImageFormat;
-    small: ImageFormat;
-    medium: ImageFormat;
-    large: ImageFormat;
+  thumbnail: ImageFormat;
+  small: ImageFormat;
+  medium: ImageFormat;
+  large: ImageFormat;
 }
 
 export interface ImageFormat {
-    name: string;
-    hash: string;
-    ext: string;
-    mime: string;
-    path?: any;
-    width: number;
-    height: number;
-    size: number;
-    url: string;
-    provider_metadata: ProviderMetadata;
+  name: string;
+  hash: string;
+  ext: string;
+  mime: string;
+  path?: any;
+  width: number;
+  height: number;
+  size: number;
+  url: string;
+  provider_metadata: ProviderMetadata;
 }
 
 export interface ProviderMetadata {
-    public_id: string;
-    resource_type: string;
+  public_id: string;
+  resource_type: string;
 }
 
 export interface ContentElement {
-    type: string;
-    text?: string;
-    bold?: boolean;
-    italic?: boolean;
-    underline?: boolean;
-    strikethrough?: boolean;
-    url?: string;
-    children?: ContentElement[];
+  type: string;
+  text?: string;
+  bold?: boolean;
+  italic?: boolean;
+  underline?: boolean;
+  strikethrough?: boolean;
+  url?: string;
+  children?: ContentElement[];
 }
 
-export type ContentType = 'paragraph' | 'heading' | 'image' | 'list' | 'link' | 'quote' | 'code';
+export type ContentType =
+  | "paragraph"
+  | "heading"
+  | "image"
+  | "list"
+  | "link"
+  | "quote"
+  | "code";
 
-export type IconProps = { type: IconType, aria_role: AriaRole, icon_text: string };
-export type LanguageProps = { t: Function, i18n: i18n };
-export type TranslationProps = { copy2text: string, copy2success: string };
+export type IconProps = {
+  type: IconType;
+  aria_role: AriaRole;
+  icon_text: string;
+};
+export type LanguageProps = { t: Function; i18n: i18n };
+export type TranslationProps = { copy2text: string; copy2success: string };
 
 export interface LinkData {
-    id: number;
-    url: string;
-    alt: string;
-    title: string;
+  id: number;
+  url: string;
+  alt: string;
+  title: string;
 }
 
 export interface AttachmentData {
-    id: number;
-    attributes: AttachmentsAttributes;
+  id: number;
+  attributes: AttachmentsAttributes;
 }
 
 export interface AttachmentsAttributes {
-    name: string;
-    alternativeText: any;
-    caption: any;
-    width: any;
-    height: any;
-    formats: any;
-    hash: string;
-    ext: string;
-    mime: string;
-    size: number;
-    url: string;
-    previewUrl: any;
-    provider: string;
-    provider_metadata: ProviderMetadata;
-    createdAt: string;
-    updatedAt: string;
+  name: string;
+  alternativeText: any;
+  caption: any;
+  width: any;
+  height: any;
+  formats: any;
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl: any;
+  provider: string;
+  provider_metadata: ProviderMetadata;
+  createdAt: string;
+  updatedAt: string;
 }
 
 /**
@@ -214,8 +224,8 @@ export interface AttachmentsAttributes {
  * @property {LinkData[]} links - An array of LinkData objects representing the links to be displayed.
  */
 export type LinksListProps = Readonly<{
-    lng: string;
-    links: LinkData[];
+  lng: string;
+  links: LinkData[];
 }>;
 
 /**
@@ -226,6 +236,6 @@ export type LinksListProps = Readonly<{
  * @property {LanguageProps} iconTranslation - The translation for icon properties.
  */
 export type TranslationResponse = Readonly<{
-    commonTranslation: LanguageProps;
-    iconTranslation: LanguageProps;
+  commonTranslation: LanguageProps;
+  iconTranslation: LanguageProps;
 }>;

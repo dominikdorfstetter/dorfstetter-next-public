@@ -1,10 +1,16 @@
 import React from "react";
-import {useTranslation as serverSideTranslation} from "@app/i18n";
-import styles from './linklist.module.scss';
+import { useTranslation as serverSideTranslation } from "@app/i18n";
+import styles from "./linklist.module.scss";
 import Icon from "@app/[lng]/components/icon";
 import Link from "next/link";
-import {IconProps, LanguageProps, LinkData, LinksListProps, TranslationResponse} from "@app/[lng]/blog/[id]/index";
-import {getIcon} from "@app/[lng]/blog/[id]/blog.utilities";
+import {
+  IconProps,
+  LanguageProps,
+  LinkData,
+  LinksListProps,
+  TranslationResponse,
+} from "@app/[lng]/blog/[id]/index";
+import { getIcon } from "@app/[lng]/blog/[id]/blog.utilities";
 
 /**
  * Retrieves translations for a specific language.
@@ -13,10 +19,10 @@ import {getIcon} from "@app/[lng]/blog/[id]/blog.utilities";
  * @return {Promise<TranslationResponse>} - A promise that resolves with an object containing the requested translations.
  */
 async function getTranslations(lng: string): Promise<TranslationResponse> {
-    const commonTranslation = await serverSideTranslation(lng, 'common');
-    const iconTranslation = await serverSideTranslation(lng, 'icons');
+  const commonTranslation = await serverSideTranslation(lng, "common");
+  const iconTranslation = await serverSideTranslation(lng, "icons");
 
-    return {commonTranslation, iconTranslation};
+  return { commonTranslation, iconTranslation };
 }
 
 /**
@@ -29,11 +35,11 @@ async function getTranslations(lng: string): Promise<TranslationResponse> {
  *   - aria_role: 'img' (string) - The ARIA role for the icon.
  */
 function getIconLink(iconTranslation: LanguageProps): IconProps {
-    return {
-        type: 'link',
-        icon_text: iconTranslation.t('link'),
-        aria_role: 'img'
-    };
+  return {
+    type: "link",
+    icon_text: iconTranslation.t("link"),
+    aria_role: "img",
+  };
 }
 
 /**
@@ -43,29 +49,31 @@ function getIconLink(iconTranslation: LanguageProps): IconProps {
  * @returns {Promise<React.JSX.Element>} The rendered React element.
  */
 async function LinksList(props: LinksListProps): Promise<React.JSX.Element> {
-    const {commonTranslation, iconTranslation} = await getTranslations(props.lng);
+  const { commonTranslation, iconTranslation } = await getTranslations(
+    props.lng,
+  );
 
-    return (
-        <>
-            <h2>{commonTranslation.t('links-headline')}</h2>
-            {
-                props.links?.map((link: LinkData, index: number) => {
-                    const linkIconProps = getIcon(iconTranslation, 'link');
+  return (
+    <>
+      <h2>{commonTranslation.t("links-headline")}</h2>
+      {props.links?.map((link: LinkData, index: number) => {
+        const linkIconProps = getIcon(iconTranslation, "link");
 
-                    return (
-                        <Link key={`link-${index}`}
-                              href={link.url}
-                              target={'_blank'}
-                              title={link.alt}
-                              className={styles.links_wrapper}>
-                            <Icon params={linkIconProps}/>
-                            <div className={styles.link_list_item}>{link.title}</div>
-                        </Link>
-                    );
-                })
-            }
-        </>
-    );
+        return (
+          <Link
+            key={`link-${index}`}
+            href={link.url}
+            target={"_blank"}
+            title={link.alt}
+            className={styles.links_wrapper}
+          >
+            <Icon params={linkIconProps} />
+            <div className={styles.link_list_item}>{link.title}</div>
+          </Link>
+        );
+      })}
+    </>
+  );
 }
 
 export default LinksList;

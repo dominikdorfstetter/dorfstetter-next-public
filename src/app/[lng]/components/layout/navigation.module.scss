@@ -2,7 +2,7 @@
 @use "../../styles/mixins" as mixins;
 
 .nav_item {
-  padding: .4em 0;
+  padding: 0.4em 0;
   display: block;
   font-size: 2.5em;
   text-decoration: none;
@@ -17,10 +17,14 @@
   color: variables.$color-secondary;
 }
 
-.nav_item:hover, .menuLink:focus {
+.nav_item:hover,
+.menuLink:focus {
   background-color: variables.$color-highlight;
-  background-image: linear-gradient(45deg,
-          variables.$color-highlight, variables.$color-highlight-secondary);
+  background-image: linear-gradient(
+    45deg,
+    variables.$color-highlight,
+    variables.$color-highlight-secondary
+  );
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -94,7 +98,8 @@
   cursor: pointer;
   filter: variables.$filter-highlight-secondary;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     filter: variables.$filter-highlight;
   }
 }

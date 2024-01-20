@@ -1,19 +1,19 @@
-import './styles/global.scss';
-import './styles/fonts.scss';
-import './styles/icons.scss';
-import React, {ReactElement} from "react";
-import styles from './layout.module.scss';
-import {dir} from 'i18next';
+import "./styles/global.scss";
+import "./styles/fonts.scss";
+import "./styles/icons.scss";
+import React, { ReactElement } from "react";
+import styles from "./layout.module.scss";
+import { dir } from "i18next";
 import Header from "@app/[lng]/components/layout/header";
 import Footer from "@app/[lng]/components/layout/footer";
-import {Metadata} from "next";
-import {useTranslation as serverSideTranslation} from "@app/i18n";
+import { Metadata } from "next";
+import { useTranslation as serverSideTranslation } from "@app/i18n";
 import LegalComponent from "@app/[lng]/components/shared/legal/legal.component";
 import Favicon from "@app/[lng]/components/layout/favicon";
 import PlausibleAnalytics from "@app/[lng]/components/analytics/plausible.analytics";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const languages: string[] = ['de', 'en', 'es'];
+const languages: string[] = ["de", "en", "es"];
 
 /**
  * This function builds the static paths for the general layout of the website.
@@ -21,7 +21,7 @@ const languages: string[] = ['de', 'en', 'es'];
  * @return {Promise<{lng: string}[]>} Array of language codes.
  */
 export async function generateStaticParams(): Promise<{ lng: string }[]> {
-    return languages.map((lng): { lng: string } => ({lng}))
+  return languages.map((lng): { lng: string } => ({ lng }));
 }
 
 /**
@@ -35,31 +35,31 @@ export async function generateStaticParams(): Promise<{ lng: string }[]> {
  * @returns {Promise<React.ReactElement>} - A promise that resolves to the root layout as a React element.
  */
 export default async function RootLayout({
-                                             children,
-                                             params
-                                         }: Readonly<{
-    children: React.ReactNode;
-    params: {
-        lng: string;
-    };
+  children,
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: {
+    lng: string;
+  };
 }>): Promise<ReactElement> {
-    return (
-        <html lang={params.lng} dir={dir(params.lng)}>
-            <body>
-                <Favicon/>
-                <div className={styles.mainWrapper}>
-                    <div className={styles.contentWrapper}>
-                        <Header params={params}/>
-                        {children}
-                    </div>
-                    <Footer params={params}/>
-                </div>
-                <PlausibleAnalytics/>
-                <LegalComponent params={params}/>
-                <SpeedInsights />
-            </body>
-        </html>
-    );
+  return (
+    <html lang={params.lng} dir={dir(params.lng)}>
+      <body>
+        <Favicon />
+        <div className={styles.mainWrapper}>
+          <div className={styles.contentWrapper}>
+            <Header params={params} />
+            {children}
+          </div>
+          <Footer params={params} />
+        </div>
+        <PlausibleAnalytics />
+        <LegalComponent params={params} />
+        <SpeedInsights />
+      </body>
+    </html>
+  );
 }
 
 /**
@@ -69,37 +69,41 @@ export default async function RootLayout({
  * @param {string} params.lng - The language to generate metadata for.
  * @returns {Promise<Metadata>} - The generated metadata.
  */
-export async function generateMetadata({params: {lng}}: Readonly<{
-    params: {
-        lng: string;
-    }
+export async function generateMetadata({
+  params: { lng },
+}: Readonly<{
+  params: {
+    lng: string;
+  };
 }>): Promise<Metadata> {
-    const {t} = await serverSideTranslation(lng, 'common');
-    const keywords: string[] =
-        t('meta-keywords').split(',').map((keyword: string) => keyword.trim()) || [];
-    return {
-        title: t('meta-title'),
-        metadataBase: new URL(t('meta-site-base')),
-        alternates: {
-            languages: {
-                'de': '/de',
-                'en': '/en',
-                'es': '/es',
-            }
-        },
-        description: t('meta-description'),
-        keywords: keywords,
-        openGraph: {
-            title: t('meta-title'),
-            description: t('meta-description'),
-            type: 'website',
-            locale: lng
-        },
-        generator: 'Next.js',
-        applicationName: t('meta-site-name'),
-        publisher: t('meta-author'),
-        creator: t('meta-author'),
-        referrer: 'origin-when-cross-origin',
-        robots: 'all',
-    }
+  const { t } = await serverSideTranslation(lng, "common");
+  const keywords: string[] =
+    t("meta-keywords")
+      .split(",")
+      .map((keyword: string) => keyword.trim()) || [];
+  return {
+    title: t("meta-title"),
+    metadataBase: new URL(t("meta-site-base")),
+    alternates: {
+      languages: {
+        de: "/de",
+        en: "/en",
+        es: "/es",
+      },
+    },
+    description: t("meta-description"),
+    keywords: keywords,
+    openGraph: {
+      title: t("meta-title"),
+      description: t("meta-description"),
+      type: "website",
+      locale: lng,
+    },
+    generator: "Next.js",
+    applicationName: t("meta-site-name"),
+    publisher: t("meta-author"),
+    creator: t("meta-author"),
+    referrer: "origin-when-cross-origin",
+    robots: "all",
+  };
 }

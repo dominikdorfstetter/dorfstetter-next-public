@@ -1,23 +1,24 @@
 @use "../styles/variables" as variables;
 
 .box {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box:first-child {
-    justify-content: left;
+  justify-content: left;
 }
 .box:last-child {
-    justify-content: right;
+  justify-content: right;
 }
 
 .navIcon > div {
-    width: 2em;
-    height: 2em;
+  width: 2em;
+  height: 2em;
 }
 
-.navIcon > div:hover, .navIcon > div:focus {
-    background-color: variables.$color-highlight;
+.navIcon > div:hover,
+.navIcon > div:focus {
+  background-color: variables.$color-highlight;
 }

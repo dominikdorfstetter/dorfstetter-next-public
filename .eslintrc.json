@@ -1,6 +1,12 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next", "prettier"],
+  "plugins": ["eslint-plugin-only-warn"],
   "rules": {
     "@next/next/no-async-client-component": "off"
-  }
+  },
+  "trailingComma": "es5",
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "jsxSingleQuote": true
 }

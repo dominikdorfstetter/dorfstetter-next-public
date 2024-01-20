@@ -2,84 +2,91 @@
 @use "../../styles/mixins" as mixins;
 
 .title {
-    font-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
-    font-weight: bolder;
-    background-color: variables.$color-highlight;
-    text-transform: uppercase;
-    font-family: variables.$font-highlight;
-    background-image: linear-gradient(45deg,
-    variables.$color-highlight, variables.$color-highlight-secondary);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: center;
-    line-height: 110%;
+  font-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
+  font-weight: bolder;
+  background-color: variables.$color-highlight;
+  text-transform: uppercase;
+  font-family: variables.$font-highlight;
+  background-image: linear-gradient(
+    45deg,
+    variables.$color-highlight,
+    variables.$color-highlight-secondary
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: center;
+  line-height: 110%;
 }
 
 .coverimage {
-    position: relative;
-    width: 100%;
-    max-inline-size: 100%;
-    aspect-ratio: 2/1;
-    block-size: auto;
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
-    z-index: 1;
+  position: relative;
+  width: 100%;
+  max-inline-size: 100%;
+  aspect-ratio: 2/1;
+  block-size: auto;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
 }
 
 .cover_container {
-    position: relative;
+  position: relative;
 }
 
 .cover_container::after {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, variables.$color-primary 3%, transparent 50%, variables.$color-primary 90%);
-    opacity: 1;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    variables.$color-primary 3%,
+    transparent 50%,
+    variables.$color-primary 90%
+  );
+  opacity: 1;
+  z-index: 1;
 }
 
 .flex_inline {
-    display: inline-flex;
-    align-items: center;
-    line-height: 1.5rem;
-    gap: 1em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5rem;
+  gap: 1em;
 }
 
 .flex_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: .5em;
-    padding-top: 1em;
-    padding-left: .25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5em;
+  padding-top: 1em;
+  padding-left: 0.25em;
 }
 
 .meta_text {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .content_wrapper {
-    position: relative;
-    margin-top: -5.5em;
-    z-index: 3;
+  position: relative;
+  margin-top: -5.5em;
+  z-index: 3;
 
-    @include mixins.respond-to('medium') {
-        margin-top: -4.5em;
-    }
+  @include mixins.respond-to("medium") {
+    margin-top: -4.5em;
+  }
 
-    @include mixins.respond-to('small') {
-        margin-top: -3.5em;
-    }
+  @include mixins.respond-to("small") {
+    margin-top: -3.5em;
+  }
 }
-

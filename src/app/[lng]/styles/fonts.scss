@@ -1,47 +1,53 @@
 @font-face {
-    font-family: 'Outfit Regular';
-    src: url('/fonts/Outfit-Regular.woff') format('woff'),
-    url('/fonts/Outfit-Regular.woff2') format('woff2');
-    font-style: italic;
-    font-display: swap;
+  font-family: "Outfit Regular";
+  src:
+    url("/fonts/Outfit-Regular.woff") format("woff"),
+    url("/fonts/Outfit-Regular.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Outfit Extra Light';
-    src: url('/fonts/Outfit-ExtraLight.woff') format('woff'),
-    url('/fonts/Outfit-ExtraLight.woff2') format('woff2');
-    font-style: italic;
-    font-display: swap;
+  font-family: "Outfit Extra Light";
+  src:
+    url("/fonts/Outfit-ExtraLight.woff") format("woff"),
+    url("/fonts/Outfit-ExtraLight.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Outfit Extra Bold';
-    src: url('/fonts/Outfit-ExtraBold.woff') format('woff'),
-    url('/fonts/Outfit-ExtraBold.woff2') format('woff2');
-    font-style: italic;
-    font-display: swap;
+  font-family: "Outfit Extra Bold";
+  src:
+    url("/fonts/Outfit-ExtraBold.woff") format("woff"),
+    url("/fonts/Outfit-ExtraBold.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Major Mono Display Regular';
-    src: url('/fonts/MajorMonoDisplay-Regular.woff') format('woff'),
-    url('/fonts/MajorMonoDisplay-Regular.woff2') format('woff2');
-    font-style: normal;
-    font-display: swap;
+  font-family: "Major Mono Display Regular";
+  src:
+    url("/fonts/MajorMonoDisplay-Regular.woff") format("woff"),
+    url("/fonts/MajorMonoDisplay-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Source Code Pro';
-    src: url('/fonts/SourceCodePro-VariableFont_wght.woff') format('woff'),
-    url('/fonts/SourceCodePro-VariableFont_wght.woff2') format('woff2');
-    font-style: auto;
-    font-display: swap;
+  font-family: "Source Code Pro";
+  src:
+    url("/fonts/SourceCodePro-VariableFont_wght.woff") format("woff"),
+    url("/fonts/SourceCodePro-VariableFont_wght.woff2") format("woff2");
+  font-style: auto;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Ysabeau Infant';
-    src: url('/fonts/YsabeauInfant-VariableFont_wght.woff') format('woff'),
-    url('/fonts/YsabeauInfant-VariableFont_wght.woff2') format('woff2');
-    font-style: auto;
-    font-display: swap;
+  font-family: "Ysabeau Infant";
+  src:
+    url("/fonts/YsabeauInfant-VariableFont_wght.woff") format("woff"),
+    url("/fonts/YsabeauInfant-VariableFont_wght.woff2") format("woff2");
+  font-style: auto;
+  font-display: swap;
 }

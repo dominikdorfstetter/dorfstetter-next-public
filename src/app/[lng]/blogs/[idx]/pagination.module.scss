@@ -13,9 +13,8 @@
   }
 
   .pagination__link {
-
-
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       .icon_svg {
         background-color: variables.$color-highlight;
       }
@@ -23,8 +22,8 @@
   }
 
   .pagination_navlink {
-
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       text-decoration: underline;
     }
   }

@@ -1,7 +1,6 @@
-
 const HEADERS = {
-    "Authorization": `bearer ${process.env.NEXT_PUBLIC_STRAPI_AUTH_TOKEN}`
-}
+  Authorization: `bearer ${process.env.NEXT_PUBLIC_STRAPI_AUTH_TOKEN}`,
+};
 
 /**
  * HTTP_OPTIONS_FORCE_CACHE is a variable of type RequestInit that defines options for an HTTP request with force cache policy.
@@ -12,8 +11,8 @@ const HEADERS = {
  * @property {Headers} headers - Specifies the headers for the request.
  */
 export const HTTP_OPTIONS_FORCE_CACHE: RequestInit = {
-    cache: 'force-cache',
-    headers: HEADERS
+  cache: "force-cache",
+  headers: HEADERS,
 };
 
 /**
@@ -25,8 +24,8 @@ export const HTTP_OPTIONS_FORCE_CACHE: RequestInit = {
  * @property {Headers} headers - The headers to include in the request.
  */
 export const HTTP_OPTIONS_CACHE_RELOAD: RequestInit = {
-    cache: 'reload',
-    headers: HEADERS
+  cache: "reload",
+  headers: HEADERS,
 };
 
 /**
@@ -37,6 +36,6 @@ export const HTTP_OPTIONS_CACHE_RELOAD: RequestInit = {
  * @property {Headers} headers - Specifies the headers for the request. Value is set to HEADERS.
  */
 export const HTTP_OPTIONS_NO_CACHE: RequestInit = {
-    cache: 'no-cache',
-    headers: HEADERS
+  cache: "no-cache",
+  headers: HEADERS,
 };

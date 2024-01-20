@@ -1,6 +1,10 @@
-import {useTranslation as serverSideTranslation} from "@app/i18n";
-import {IconProps, LanguageProps, TranslationResponse} from "@app/[lng]/blog/[id]/index";
-import icon, {IconType} from "@app/[lng]/components/icon";
+import { useTranslation as serverSideTranslation } from "@app/i18n";
+import {
+  IconProps,
+  LanguageProps,
+  TranslationResponse,
+} from "@app/[lng]/blog/[id]/index";
+import icon, { IconType } from "@app/[lng]/components/icon";
 
 /**
  * Retrieves translations for a specific language.
@@ -9,10 +13,10 @@ import icon, {IconType} from "@app/[lng]/components/icon";
  * @return {Promise<TranslationResponse>} - A promise that resolves with an object containing the requested translations.
  */
 async function getTranslations(lng: string): Promise<TranslationResponse> {
-    const commonTranslation = await serverSideTranslation(lng, 'common');
-    const iconTranslation = await serverSideTranslation(lng, 'icons');
+  const commonTranslation = await serverSideTranslation(lng, "common");
+  const iconTranslation = await serverSideTranslation(lng, "icons");
 
-    return {commonTranslation, iconTranslation};
+  return { commonTranslation, iconTranslation };
 }
 
 /**
@@ -22,12 +26,15 @@ async function getTranslations(lng: string): Promise<TranslationResponse> {
  * @param {IconType} iconType - The type of icon
  * @return {IconProps} - The icon properties
  */
-function getIcon(iconTranslation: LanguageProps, iconType: IconType): IconProps {
-    return {
-        type: iconType,
-        icon_text: iconTranslation.t(`${iconType}`),
-        aria_role: 'img'
-    };
+function getIcon(
+  iconTranslation: LanguageProps,
+  iconType: IconType,
+): IconProps {
+  return {
+    type: iconType,
+    icon_text: iconTranslation.t(`${iconType}`),
+    aria_role: "img",
+  };
 }
 
-export {getTranslations, getIcon};
+export { getTranslations, getIcon };

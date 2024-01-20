@@ -13,23 +13,24 @@ index.scss │ └── Component1.scss │ └── Component2.scss ├──
 
 - List of any software requirements or dependencies for this project. For example:
 
-    - Node.js
-    - React
-    - Sass
+  - Node.js
+  - React
+  - Sass
 
 ## Installation
 
 Provide step by step instructions on how to install all dependencies and get the project running. For example:
 
 1. Clone the repo
-    ```bash
-    git clone https://github.com/yourusername/yourreponame.git
-    ```
+
+   ```bash
+   git clone https://github.com/yourusername/yourreponame.git
+   ```
 
 2. Install NPM packages
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ## Usage / Getting Started
 

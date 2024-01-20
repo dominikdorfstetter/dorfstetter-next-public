@@ -12,13 +12,13 @@
   row-gap: 2em;
   padding-bottom: 1em;
 
-  @include mixins.respond-to('medium') {
+  @include mixins.respond-to("medium") {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  a  {
+  a {
     &:focus {
       text-decoration: underline;
     }
@@ -32,11 +32,11 @@
 
 .grid_translation {
   text-align: center;
-  font-size: .95em;
+  font-size: 0.95em;
   align-self: baseline;
   grid-area: 1 / 5 / 2 / 9;
 
-  @include mixins.respond-to('medium') {
+  @include mixins.respond-to("medium") {
     align-self: center;
   }
 }
@@ -48,7 +48,7 @@
   flex-direction: column;
   gap: 10px;
 
-  @include mixins.respond-to('medium') {
+  @include mixins.respond-to("medium") {
     align-content: center;
     text-align: center;
   }
@@ -58,9 +58,9 @@
   text-align: center;
   grid-area: 2 / 4 / 3 / 10;
   align-self: end;
-  font-size: .85em;
+  font-size: 0.85em;
 
-  @include mixins.respond-to('medium') {
+  @include mixins.respond-to("medium") {
     text-align: center;
     align-self: center;
   }
