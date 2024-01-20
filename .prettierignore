@@ -10,7 +10,7 @@ node_modules
 **/next-env.d.ts
 **/tsconfig.json
 **/*.json
-package-lock.json
-yarn.lock
-package.json
+**/package-lock.json
+**/yarn.lock
+**/package.json
 coverage

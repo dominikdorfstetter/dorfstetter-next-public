@@ -8,5 +8,6 @@
   "semi": true,
   "tabWidth": 2,
   "singleQuote": true,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "ignorePatterns": ["**/jest.config.ts", "**/jest.setup.ts", "**/next.config.js", "**/tsconfig.json"]
 }
