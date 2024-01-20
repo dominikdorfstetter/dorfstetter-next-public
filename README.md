@@ -31,23 +31,23 @@ The real logic behind every single page, global components and styles.
 
 Assets used by the application, also includes language files for translation.
 
-### /favicon
+#### /favicon
 
 Favicon, Icons and web manifest.
 
-### /fonts
+#### /fonts
 
 Fonts are included directly in the project.
 
-### /icons
+#### /icons
 
 Icons used for the application.
 
-### /img
+#### /img
 
 Logos, images that shouldn't be loaded from the cdn.
 
-### /locales
+#### /locales
 
 The language files for the entire application.
 
