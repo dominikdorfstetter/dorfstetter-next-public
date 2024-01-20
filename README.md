@@ -73,6 +73,17 @@ The language files for the entire application.
 
 ## Usage / Getting Started
 
+### How to contribute
+
+This project uses git flow with feature-branches. Please use feature-branches based on develop. If your pull-request into develop is accepted,
+the project is automatically deployed to the [Staging Environment](https://dorfstetterat.vercel.app).
+
+![01 How it works.svg](https://wac-cdn.atlassian.com/dam/jcr:34c86360-8dea-4be4-92f7-6597d4d5bfae/02%20Feature%20branches.svg?cdnVersion=1403)
+
+If the staging environment is stable and manually tested the develop branch is merged back into main and tagged using semantic versioning.
+
+Never push directly to develop and never push directly to main. Branch protection is in place.
+
 ### Start the project in development mode.
 
 ```bash
