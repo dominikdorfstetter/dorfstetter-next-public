@@ -77,13 +77,18 @@ export default async function Footer({
         </div>
 
         <div className={styles.grid_copyright}>
-          {/**
-                         <div className={styles.grid_found_bug}>
-                         {t('bug-found')} <Link href={t('bug-found-link')}
-                         title={t('bug-found-link-title')} target={`_blank`}>
-                         {t('bug-found-link-text')}
-                         </Link>
-                         </div> **/}
+          {
+            <div className={styles.found_bug}>
+              {t("bug-found")}{" "}
+              <Link
+                href={t("bug-found-link")}
+                title={t("bug-found-link-title")}
+                target={`_blank`}
+              >
+                {t("bug-found-link-text")}
+              </Link>
+            </div>
+          }
           <div className={styles.grid_credits}>
             &copy;&nbsp;{t("copyright")}
           </div>

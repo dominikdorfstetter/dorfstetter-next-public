@@ -81,3 +81,10 @@
   max-width: variables.$page-max-width;
   margin: 0 auto;
 }
+
+.found_bug {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1em;
+  gap: 0.5em;
+}
