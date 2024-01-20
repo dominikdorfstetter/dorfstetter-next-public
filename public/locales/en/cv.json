@@ -1,0 +1,12 @@
+{
+  "from": "from",
+  "to": "to",
+  "current": "current",
+  "notLoaded": "not loaded",
+  "placeholderTitle": "Placeholder title",
+  "placeholderIntro": "Placeholder introtext",
+  "placeholderURL": "https://example.com",
+  "placeholderLocation": "Vienna",
+  "placeholderCompany": "Placeholder company",
+  "placeholderPosition": "Placeholder position"
+}

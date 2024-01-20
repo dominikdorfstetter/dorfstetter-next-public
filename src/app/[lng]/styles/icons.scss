@@ -1,0 +1,97 @@
+@use "variables" as variables;
+
+.icon_svg {
+    width: 20px;
+    height: 20px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    cursor: inherit;
+    background-color: variables.$color-highlight-secondary;
+}
+
+.icon_hover__effect {
+    &:hover, &:focus {
+        background-color: variables.$color-highlight;
+    }
+}
+
+.icon_arrow_back {
+    mask-image: url('/icons/misc/arrow_back.svg');
+    -webkit-mask-image: url('/icons/misc/arrow_back.svg');
+}
+
+.icon_arrow_forward {
+    mask-image: url('/icons/misc/arrow_forward.svg');
+    -webkit-mask-image: url('/icons/misc/arrow_forward.svg');
+}
+
+.icon_close {
+    mask-image: url('/icons/misc/close.svg');
+    -webkit-mask-image: url('/icons/misc/close.svg');
+}
+
+.icon_download {
+    mask-image: url('/icons/misc/download.svg');
+    -webkit-mask-image: url('/icons/misc/download.svg');
+}
+
+.icon_event {
+    mask-image: url('/icons/misc/event.svg');
+    -webkit-mask-image: url('/icons/misc/event.svg');
+}
+
+.icon_home {
+    mask-image: url('/icons/misc/home.svg');
+    -webkit-mask-image: url('/icons/misc/home.svg');
+}
+
+.icon_menu {
+    mask-image: url('/icons/misc/menu.svg');
+    -webkit-mask-image: url('/icons/misc/menu.svg');
+}
+
+.icon_person {
+    mask-image: url('/icons/misc/person.svg');
+    -webkit-mask-image: url('/icons/misc/person.svg');
+}
+
+.icon_save {
+    mask-image: url('/icons/misc/save.svg');
+    -webkit-mask-image: url('/icons/misc/save.svg');
+}
+
+.icon_link {
+    mask-image: url('/icons/misc/link.svg');
+    -webkit-mask-image: url('/icons/misc/link.svg');
+}
+
+.icon_mail {
+    mask-image: url('/icons/misc/mail.svg');
+    -webkit-mask-image: url('/icons/misc/mail.svg');
+}
+
+.icon_share {
+    mask-image: url('/icons/misc/share.svg');
+    -webkit-mask-image: url('/icons/misc/share.svg');
+}
+
+.icon_month {
+    mask-image: url('/icons/misc/month.svg');
+    -webkit-mask-image: url('/icons/misc/month.svg');
+}
+
+.icon_external {
+    mask-image: url('/icons/misc/external.svg');
+    -webkit-mask-image: url('/icons/misc/external.svg');
+}
+
+.icon_work {
+    mask-image: url('/icons/misc/work.svg');
+    -webkit-mask-image: url('/icons/misc/work.svg');
+}
+
+.icon_location {
+    mask-image: url('/icons/misc/location.svg');
+    -webkit-mask-image: url('/icons/misc/location.svg');
+}

@@ -1,0 +1,131 @@
+@use "../../styles/variables" as variables;
+@use "../../styles/mixins" as mixins;
+
+.nav_item {
+  padding: .4em 0;
+  display: block;
+  font-size: 2.5em;
+  text-decoration: none;
+  color: variables.$color-secondary;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1em;
+}
+
+.nav_item > a {
+  text-decoration: none !important;
+  color: variables.$color-secondary;
+}
+
+.nav_item:hover, .menuLink:focus {
+  background-color: variables.$color-highlight;
+  background-image: linear-gradient(45deg,
+          variables.$color-highlight, variables.$color-highlight-secondary);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav_wrapper {
+  position: absolute;
+  top: 1.5em;
+  z-index: 9999;
+  right: 2em;
+  font-family: variables.$font-highlight;
+}
+
+.nav_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: variables.$backdrop-filter;
+  z-index: 101;
+}
+
+.no_display {
+  display: none;
+}
+
+.navMenu {
+  position: relative;
+  top: 10px;
+  display: flex;
+  width: 100%;
+  max-width: variables.$page-max-width;
+  color: variables.$color-secondary;
+  line-height: 3em;
+  align-items: center;
+  z-index: 100;
+  font-size: 1.2em;
+  height: 2.5em;
+
+  .left_nav {
+    position: absolute;
+    left: 0;
+  }
+
+  .mid_nav {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .right_nav {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box > img {
+  width: 4.5em;
+  aspect-ratio: 3/2;
+  block-size: auto;
+  object-fit: cover;
+  height: auto;
+  cursor: pointer;
+  filter: variables.$filter-highlight-secondary;
+
+  &:focus, &:hover {
+    filter: variables.$filter-highlight;
+  }
+}
+
+.box:focus > img {
+  filter: variables.$filter-highlight;
+}
+
+.box:first-child {
+  justify-content: left;
+}
+
+.box:last-child {
+  justify-content: right;
+}
+
+.navIcon > div {
+  width: 2em;
+  height: 2em;
+}
+
+.navIcon div:hover {
+  outline: none;
+  background-color: variables.$color-highlight;
+  cursor: pointer;
+}
+
+.navIcon:focus {
+  outline: none;
+
+  div {
+    background-color: variables.$color-highlight;
+  }
+}

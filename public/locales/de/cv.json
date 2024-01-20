@@ -1,0 +1,12 @@
+{
+  "from": "von",
+  "to": "bis",
+  "current": "aktuell",
+  "notLoaded": "nicht geladen",
+  "placeholderTitle": "Platzhalter-Titel",
+  "placeholderIntro": "Platzhalter-Einführungstext",
+  "placeholderURL": "https://example.com",
+  "placeholderLocation": "Wien",
+  "placeholderCompany": "Platzhalter-Firma",
+  "placeholderPosition": "Platzhalter-Position"
+}

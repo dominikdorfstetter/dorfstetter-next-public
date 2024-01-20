@@ -1,0 +1,31 @@
+@use "../../styles/variables" as variables;
+
+.pagination_wrapper {
+  display: flex;
+  font-size: 1.1em;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
+
+  .active__page {
+    font-family: variables.$font-highlight;
+    color: variables.$color-highlight-secondary;
+  }
+
+  .pagination__link {
+
+
+    &:focus, &:hover {
+      .icon_svg {
+        background-color: variables.$color-highlight;
+      }
+    }
+  }
+
+  .pagination_navlink {
+
+    &:focus, &:hover {
+      text-decoration: underline;
+    }
+  }
+}

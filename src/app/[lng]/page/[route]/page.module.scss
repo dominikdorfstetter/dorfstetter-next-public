@@ -1,0 +1,47 @@
+@use "../../styles/variables" as variables;
+@use "../../styles/mixins" as mixins;
+
+.title {
+    font-size: 3rem;
+    font-weight: bolder;
+    background-color: variables.$color-highlight;
+    background-image: linear-gradient(45deg,
+    variables.$color-highlight, variables.$color-highlight-secondary);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.coverimage {
+    width: 100%;
+    max-inline-size: 100%;
+    aspect-ratio: 2/1;
+    block-size: auto;
+    object-fit: cover;
+    padding-bottom: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+.flex_inline {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.5rem;
+    gap: 1em;
+}
+
+.flex_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5em;
+    padding-top: 1em;
+    padding-left: .25em;
+}
+
+.meta_text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+

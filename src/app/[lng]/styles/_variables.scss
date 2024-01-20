@@ -1,0 +1,43 @@
+$color-primary: #271f30;
+$color-secondary: #fffbff;
+$filter-secondary: invert(84%) sepia(57%) saturate(530%) hue-rotate(191deg) brightness(117%) contrast(101%);
+$color-highlight: #c8ad55;
+$filter-highlight: invert(69%) sepia(19%) saturate(980%) hue-rotate(8deg) brightness(96%) contrast(91%);
+$color-highlight-secondary: #D67757;
+$filter-highlight-secondary: invert(57%) sepia(41%) saturate(657%) hue-rotate(328deg) brightness(88%) contrast(90%);
+$font-fallback-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$font-fallback-serif: "Times New Roman", serif;
+$font-fallback-mono: monospace;
+$font-highlight: "Outfit Extra Bold", $font-fallback-sans-serif;
+$font-regular: "Outfit Extra Light", $font-fallback-sans-serif;
+$font-code: "Source Code Pro", $font-fallback-mono;
+$font-serif: "Ysabeau Infant", $font-fallback-serif;
+$font-size-regular: clamp(1rem, 0.9375rem + 0.25vw, 1.125rem);
+$font-size-medium: 17px;
+$font-size-small: 16px;
+$border-radius-regular: 12px;
+$border-regular: 4px solid $color-highlight-secondary;
+$border-regular-hover: 4px solid $color-highlight;
+$border-small: 2px solid $color-highlight-secondary;
+$border-small-hover: 2px solid $color-highlight;
+$border-tiny: 1px solid $color-highlight-secondary;
+$border-tiny-hover: 1px solid $color-highlight;
+$backdrop-filter: saturate(125%) blur(12px);
+$page-max-width: 1400px;
+$page-break-min: 500px;
+$page-break-mid: 750px;
+$breakpoints: (
+        'small':  ( max-width: $page-break-min),
+        'medium': ( max-width: $page-break-mid),
+        'large':  ( max-width: $page-max-width)
+) !default;
+
+$page-padding-top: 100px;
+$page-padding-top-large: 50px;
+$page-padding-top-medium: 40px;
+$page-padding-top-small: 30px;
+$landing-padding-top: 150px;
+$landing-padding-top-large: 70px;
+$landing-padding-top-medium: 70px;
+$landing-padding-top-small: 70px;

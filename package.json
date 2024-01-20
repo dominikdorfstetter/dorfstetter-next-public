@@ -1,0 +1,61 @@
+{
+  "name": "dorfstetter.at",
+  "version": "0.0.9",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "prod": "next dev --port 3000",
+    "build": "next build",
+    "start": "ENVIRONMENT=./.env.production next start",
+    "lint": "next lint",
+    "update": "npm update",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.4",
+    "accept-language": "^3.0.18",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "gsap": "^3.12.4",
+    "i18next": "^23.7.11",
+    "i18next-resources-to-backend": "^1.2.0",
+    "next": "^14.0.4",
+    "next-i18next": "^15.1.1",
+    "next-plausible": "^3.12.0",
+    "next-translate": "^2.6.2",
+    "react": "^18.2.0",
+    "react-cookie": "^6.1.1",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^14.0.0",
+    "react-ssr-prepass": "^1.5.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "sass": "^1.69.7",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-helmet": "^6.1.11",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@wixc3/react-board": "^2.3.0",
+    "env-cmd": "^10.1.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "react-router-dom": "^6.21.2",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  }
+}

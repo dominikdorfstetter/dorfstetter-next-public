@@ -1,0 +1,83 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as variables;
+
+.footerWrapper {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 2em;
+  padding-bottom: 1em;
+
+  @include mixins.respond-to('medium') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a  {
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.grid_social {
+  text-align: left;
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+.grid_translation {
+  text-align: center;
+  font-size: .95em;
+  align-self: baseline;
+  grid-area: 1 / 5 / 2 / 9;
+
+  @include mixins.respond-to('medium') {
+    align-self: center;
+  }
+}
+
+.grid_links {
+  text-align: right;
+  grid-area: 1 / 9 / 2 / 13;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include mixins.respond-to('medium') {
+    align-content: center;
+    text-align: center;
+  }
+}
+
+.grid_copyright {
+  text-align: center;
+  grid-area: 2 / 4 / 3 / 10;
+  align-self: end;
+  font-size: .85em;
+
+  @include mixins.respond-to('medium') {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  gap: 1em;
+}
+
+.gradient_line {
+  height: 5px;
+  background-color: variables.$color-highlight-secondary;
+  max-width: variables.$page-max-width;
+  margin: 0 auto;
+}

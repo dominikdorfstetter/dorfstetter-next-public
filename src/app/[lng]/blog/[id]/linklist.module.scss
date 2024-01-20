@@ -1,0 +1,10 @@
+.links_wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.links_wrapper > .icon_save {
+    width: 3em;
+    height: 3em;
+}

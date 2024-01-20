@@ -1,0 +1,16 @@
+{
+  "de": "DE",
+  "en": "EN",
+  "es": "ES",
+  "de-long": "Switch to the German version",
+  "en-long": "English",
+  "es-long": "Switch to the Spanish version",
+  "privacy": "Privacy",
+  "imprint": "Imprint",
+  "copyright": "2024 Dominik Dorfstetter",
+  "cookie": "Privacy Settings",
+  "bug-found": "Found an issue with this page?",
+  "bug-found-link-text": "Fix it on GitHub",
+  "bug-found-link": "https://github.com/dominikdorfstetter/dorfstetterat/tree/main/src/app",
+  "bug-found-link-title": "Link to GitHub"
+}

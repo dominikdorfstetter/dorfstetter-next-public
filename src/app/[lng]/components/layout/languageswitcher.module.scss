@@ -1,0 +1,12 @@
+@use "../../styles/variables" as variables;
+
+.chosenLang {
+  font-family: variables.$font-highlight;
+}
+
+.lang__link {
+
+  &:focus {
+    text-decoration: underline;
+  }
+}

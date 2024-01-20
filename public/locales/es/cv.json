@@ -1,0 +1,12 @@
+{
+  "from": "de",
+  "to": "a",
+  "current": "actual",
+  "notLoaded": "no cargado",
+  "placeholderTitle": "Título del marcador de posición",
+  "placeholderIntro": "Texto introductorio del marcador de posición",
+  "placeholderURL": "https://ejemplo.com",
+  "placeholderLocation": "Viena",
+  "placeholderCompany": "Empresa de referencia",
+  "placeholderPosition": "Posición del marcador de posición"
+}
