@@ -21,8 +21,8 @@ function BreadcrumbsElement({
   current,
 }: Readonly<BreadcrumbsProps>): React.JSX.Element {
   const reduceText = (text: string) => {
-    if (text.length > 15) {
-      return text.substring(0, 15) + "...";
+    if (text.length > 18) {
+      return text.substring(0, 18) + "...";
     } else return text;
   };
   return (
