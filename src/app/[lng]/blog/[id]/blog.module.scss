@@ -1,6 +1,18 @@
 @use "../../styles/variables" as variables;
 @use "../../styles/mixins" as mixins;
+.breadcrumbs {
+  top: 120px;
+  z-index: 999;
+  position: absolute;
 
+  @include mixins.respond-to("medium") {
+    top: 100px;
+  }
+
+  @include mixins.respond-to("small") {
+    top: 80px;
+  }
+}
 .title {
   font-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
   font-weight: bolder;
@@ -20,6 +32,7 @@
   align-items: center;
   vertical-align: center;
   line-height: 110%;
+  padding-top: 0.5em;
 }
 
 .coverimage {

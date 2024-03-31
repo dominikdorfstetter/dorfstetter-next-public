@@ -1,0 +1,35 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as variables;
+
+.breadcrumbs__container {
+  display: inline-flex;
+  align-items: center;
+  top: 100px;
+  z-index: 3;
+  position: absolute;
+  padding: 0.7em;
+  background-color: variables.$color-highlight-secondary;
+  gap: 1em;
+  height: 2.5em;
+  border-radius: 1em;
+
+  @include mixins.respond-to("medium") {
+    top: 90px;
+  }
+
+  @include mixins.respond-to("small") {
+    top: 80px;
+  }
+
+  .breadcrumbs__element {
+    font-family: variables.$font-highlight;
+    color: variables.$color-primary;
+    > a:hover {
+      text-decoration: none;
+    }
+    & > .icon_svg_inverted {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

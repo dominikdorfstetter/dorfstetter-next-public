@@ -6,6 +6,9 @@ import { useTranslation as serverSideTranslation } from "@app/i18n";
 import styles from "./blogs.module.scss";
 import { HTTP_OPTIONS_CACHE_RELOAD } from "@app/http.headers";
 import { BlogData, BlogsAPIResponse } from "@app/[lng]/blogs/[idx]/index";
+import BreadcrumbsElement, {
+  BreadCrumbsElement,
+} from "@app/[lng]/components/shared/breadcrumbs.element";
 
 /**
  * Retrieves a list of blogs based on the specified locale and start page.
@@ -52,6 +55,16 @@ export default async function BlogsPage({
   const blogResponse: BlogsAPIResponse = await getBlogs(lng, params?.idx);
   const blogs: BlogData[] = blogResponse?.data;
   const { t } = await serverSideTranslation(lng, "blogs");
+  const crumbs: BreadCrumbsElement[] = [
+    {
+      icon: "home",
+      title: t("home"),
+      url: "/" + lng,
+    },
+  ];
+  const currentBreadcrumb: BreadCrumbsElement = {
+    title: t("crumbs-headline"),
+  };
 
   // redirect to first page if page returned has no elements
   if (!blogs || blogs?.length === 0) {
@@ -64,6 +77,7 @@ export default async function BlogsPage({
 
   return (
     <div className={styles.blogspage}>
+      <BreadcrumbsElement crumbs={crumbs} current={currentBreadcrumb} />
       {showPagination ? (
         <h1>
           {t("headline")} - {t("site")} {currentPage}

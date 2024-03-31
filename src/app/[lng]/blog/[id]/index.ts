@@ -181,6 +181,7 @@ export type IconProps = {
   type: IconType;
   aria_role: AriaRole;
   icon_text: string;
+  hoverEffect?: boolean;
 };
 export type LanguageProps = { t: Function; i18n: i18n };
 export type TranslationProps = { copy2text: string; copy2success: string };
