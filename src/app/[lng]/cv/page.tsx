@@ -6,6 +6,9 @@ import { CV, CVEntry, CVPageProps, Data, Skill } from "@app/[lng]/cv/index";
 import { useTranslation as serverSideTranslation } from "@app/i18n";
 import { fetchData } from "@app/utilities";
 import Icon, { IconProps } from "@app/[lng]/components/icon";
+import BreadcrumbsElement, {
+  BreadCrumbsElement,
+} from "@app/[lng]/components/shared/breadcrumbs.element";
 
 /**
  * Retrieves the CV data from the API based on the given locale.
@@ -39,9 +42,20 @@ export default async function CVPage({
     getCV(params.lng),
     serverSideTranslation(params.lng, "cv"),
   ]);
+  const crumbs: BreadCrumbsElement[] = [
+    {
+      icon: "home",
+      title: "home",
+      url: "/" + params.lng,
+    },
+  ];
+  const currentBreadcrumb: BreadCrumbsElement = {
+    title: cvData.title,
+  };
 
   return (
     <div className={`page_wrapper`}>
+      <BreadcrumbsElement crumbs={crumbs} current={currentBreadcrumb} />
       {cvData && <h1>{cvData.title ?? t("placeholderTitle")}</h1>}
       {cvData && <p>{cvData.introduction ?? t("placeholderIntro")}</p>}
       {cvData && (
@@ -84,7 +98,6 @@ function CVEntryElement({
 }: Readonly<{ cvEntry: CVEntry; t: Function }>): React.JSX.Element {
   const skillsExistOnEntry =
     (cvEntry && cvEntry.skills && cvEntry.skills.length > 0) ?? false;
-
   const fromDate: Date | null = cvEntry.from ? new Date(cvEntry.from) : null;
   const toDate: Date | null = cvEntry.to ? new Date(cvEntry.to) : null;
   const iconWork: IconProps = {
