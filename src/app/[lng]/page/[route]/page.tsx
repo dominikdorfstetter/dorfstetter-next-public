@@ -14,6 +14,9 @@ import {
   PageData,
 } from "@app/[lng]/page/[route]/index";
 import { fetchData } from "@app/utilities";
+import BreadcrumbsElement, {
+  BreadCrumbsElement,
+} from "@app/[lng]/components/shared/breadcrumbs.element";
 
 /**
  * Retrieves a page by its ID from the Strapi API.
@@ -107,10 +110,20 @@ async function CommonPage({
 }>): Promise<React.JSX.Element> {
   const { lng, route } = params;
   let content: Content[] = [];
-
+  const crumbs: BreadCrumbsElement[] = [
+    {
+      icon: "home",
+      title: "home",
+      url: "/" + lng,
+    },
+  ];
+  let currentBreadcrumb: BreadCrumbsElement | undefined;
   try {
     const pageData: PageData = await getPage(lng, route);
     const page: PageContent = pageData.attributes.pageContent;
+    currentBreadcrumb = {
+      title: page.title,
+    };
     content = page?.content || [];
   } catch (error) {
     console.error(error);
@@ -118,6 +131,7 @@ async function CommonPage({
 
   return (
     <div className={`page_wrapper`}>
+      <BreadcrumbsElement crumbs={crumbs} current={currentBreadcrumb} />
       <ContentPageElement
         content={content}
         context={`page`}

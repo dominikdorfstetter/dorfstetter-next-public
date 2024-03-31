@@ -25,6 +25,7 @@ export type IconProps = {
   aria_role: AriaRole;
   icon_text: string;
   hoverEffect?: boolean;
+  inverted?: boolean;
 };
 
 /**
@@ -37,7 +38,7 @@ export type IconProps = {
  * @returns {React.JSX.Element} - The rendered icon element.
  */
 function Icon({
-  params: { type, aria_role, icon_text, hoverEffect = false },
+  params: { type, aria_role, icon_text, hoverEffect = false, inverted = false },
 }: Readonly<{
   params: IconProps;
 }>): React.JSX.Element {
@@ -45,13 +46,13 @@ function Icon({
     <>
       {aria_role === "presentation" && (
         <div
-          className={`icon_svg icon_${type} ${hoverEffect && "icon_hover__effect"}`}
+          className={`${inverted ? "icon_svg_inverted" : "icon_svg"} icon_${type} ${hoverEffect && "icon_hover__effect"}`}
           role={aria_role}
         />
       )}
       {aria_role === "img" && (
         <div
-          className={`icon_svg icon_${type} ${hoverEffect && "icon_hover__effect"}`}
+          className={`${inverted ? "icon_svg_inverted" : "icon_svg"} icon_${type} ${hoverEffect && "icon_hover__effect"}`}
           role={aria_role}
           aria-label={icon_text}
         />

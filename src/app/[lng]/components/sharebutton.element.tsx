@@ -39,7 +39,8 @@ function ShareButton({
         type: "share",
         icon_text: translation.t("share"),
         aria_role: "presentation",
-      });
+        hoverEffect: true,
+      } as IconProps);
     };
 
     fetchServerSideTranslation();

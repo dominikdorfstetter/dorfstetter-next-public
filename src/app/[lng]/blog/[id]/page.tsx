@@ -20,6 +20,9 @@ import {
   TranslationProps,
   LinkData,
 } from "@app/[lng]/blog/[id]/index";
+import BreadcrumbsElement, {
+  BreadCrumbsElement,
+} from "@app/[lng]/components/shared/breadcrumbs.element";
 
 /**
  * Fetch an API resource and converts it to JSON
@@ -99,7 +102,20 @@ async function BlogPage({
     icon_text: iconTranslation.t("event"),
     aria_role: "presentation",
   };
-
+  const currentBreadcrumb: BreadCrumbsElement = {
+    title: blog.title,
+  };
+  const crumbs: BreadCrumbsElement[] = [
+    {
+      icon: "home",
+      title: t("home"),
+      url: "/" + lng,
+    },
+    {
+      title: t("crumbs-headline"),
+      url: "/" + lng + "/blogs",
+    },
+  ];
   const hostname =
     typeof window !== "undefined" && window.location.hostname
       ? window.location.hostname
@@ -109,6 +125,7 @@ async function BlogPage({
 
   return (
     <div className={styles.blogpage}>
+      <BreadcrumbsElement crumbs={crumbs} current={currentBreadcrumb} />
       <div className={styles.cover_container}>
         <Image
           className={styles.coverimage}
@@ -118,6 +135,7 @@ async function BlogPage({
           height={600}
         />
       </div>
+
       <div className={styles.content_wrapper}>
         <div className={styles.title}>
           {blog?.title}

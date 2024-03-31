@@ -10,6 +10,16 @@
   background-color: variables.$color-highlight-secondary;
 }
 
+.icon_svg_inverted {
+  width: 20px;
+  height: 20px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+  cursor: inherit;
+  background-color: variables.$color-primary;
+}
+
 .icon_hover__effect {
   &:hover,
   &:focus {
