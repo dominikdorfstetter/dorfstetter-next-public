@@ -2,18 +2,18 @@
 @use "../../styles/mixins" as mixins;
 
 .blogspage {
-  padding-top: 80px;
+  padding-top: variables.$page-padding-top;
 
   @include mixins.respond-to("large") {
-    padding-top: 70px;
+    padding-top: variables.$page-padding-top-large;
   }
 
   @include mixins.respond-to("medium") {
-    padding-top: 70px;
+    padding-top: variables.$page-padding-top-medium;
   }
 
   @include mixins.respond-to("small") {
-    padding-top: 60px;
+    padding-top: variables.$page-padding-top-small;
   }
 }
 

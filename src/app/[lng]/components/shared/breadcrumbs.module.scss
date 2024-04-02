@@ -4,14 +4,19 @@
 .breadcrumbs__container {
   display: inline-flex;
   align-items: center;
-  top: 100px;
+  top: 110px;
   z-index: 3;
   position: absolute;
+  line-height: 2.5em;
   padding: 0.7em;
   background-color: variables.$color-highlight-secondary;
   gap: 1em;
   height: 2.5em;
   border-radius: 1em;
+
+  @include mixins.respond-to("large") {
+    top: 100px;
+  }
 
   @include mixins.respond-to("medium") {
     top: 90px;
@@ -28,8 +33,8 @@
       text-decoration: none;
     }
     & > .icon_svg_inverted {
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
     }
   }
 }
