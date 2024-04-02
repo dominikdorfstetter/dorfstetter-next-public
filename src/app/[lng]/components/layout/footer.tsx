@@ -85,6 +85,7 @@ export default async function Footer({
                 title={t("bug-found-link-title")}
                 target={`_blank`}
               >
+                &nbsp;
                 {t("bug-found-link-text")}
               </Link>
             </div>

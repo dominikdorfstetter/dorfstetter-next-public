@@ -45,7 +45,7 @@ function BreadcrumbsElement({
               </span>
               {current && (
                 <span className={styles.breadcrumbs__element}>
-                  <span>&gt;</span>
+                  <span>&#47;</span>
                 </span>
               )}
             </>
